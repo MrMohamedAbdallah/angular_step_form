@@ -1,0 +1,36 @@
+<div [ngSwitch]="step">
+  <!-- Step 1 -->
+  <div *ngSwitchCase="1">
+    <app-form-user-details
+      (nextStep)="nextStep()"
+      (handleChange)="handleChange($event)"
+      [values]="form.value"
+    ></app-form-user-details>
+  </div>
+
+  <!-- Step 2 -->
+  <div *ngSwitchCase="2">
+    <app-form-personal-details
+      (nextStep)="nextStep()"
+      (prevStep)="prevStep()"
+      (handleChange)="handleChange($event)"
+      [values]="form.value"
+    ></app-form-personal-details>
+  </div>
+
+  <!-- Step 3 => Confirm -->
+  <div *ngSwitchCase="3">
+    <app-confirm
+      (nextStep)="nextStep()"
+      (prevStep)="prevStep()"
+      [values]="form.value"
+    ></app-confirm>
+  </div>
+
+  <!-- Step 4 => Success-->
+  <div *ngSwitchCase="4">
+    <app-success></app-success>
+  </div>
+
+
+</div>

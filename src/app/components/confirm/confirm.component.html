@@ -1,0 +1,56 @@
+<mat-toolbar color="primary" style="justify-content: center;">
+    <span>Confirm User Details</span>
+  </mat-toolbar>
+  
+  <!-- =========== List =========== -->
+  <mat-list>
+    <mat-list-item>
+      <h3 matLine> First Name </h3>
+      <p matLine>
+        <span> {{values.firstName}} </span>
+      </p>
+    </mat-list-item>
+    <mat-list-item>
+      <h3 matLine> Last Name </h3>
+      <p matLine>
+        <span> {{values.lastName}} </span>
+      </p>
+    </mat-list-item>
+    <mat-list-item>
+      <h3 matLine> Email </h3>
+      <p matLine>
+        <span> {{values.email}} </span>
+      </p>
+    </mat-list-item>
+    <mat-list-item>
+      <h3 matLine> Occupation </h3>
+      <p matLine>
+        <span> {{values.occupation}} </span>
+      </p>
+    </mat-list-item>
+    <mat-list-item>
+      <h3 matLine> City </h3>
+      <p matLine>
+        <span> {{values.city}} </span>
+      </p>
+    </mat-list-item>
+    <mat-list-item>
+      <h3 matLine> Bio </h3>
+      <p matLine>
+        <span> {{values.bio}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+
+
+
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="nextStep.emit()" style="margin-right: 15px;">
+        Confirm & Continue
+    </button>
+    <button mat-raised-button (click)="prevStep.emit()">
+      Back
+    </button>
+  
+  </div>
+  

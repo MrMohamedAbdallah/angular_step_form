@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" style="justify-content: center;">
+  <span class="right">Enter User Details</span>
+</mat-toolbar>
+
+<!-- =========== Inputs =========== -->
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Your First Name</mat-label>
+    <input
+      matInput
+      [value]="values.firstName"
+      (change)="change('firstName', $event)"
+    />
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Your Last Name</mat-label>
+    <input
+      matInput
+      [value]="values.lastName"
+      (change)="change('lastName', $event)"
+    />
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Your Email</mat-label>
+    <input matInput [value]="values.email" (change)="change('email', $event)" />
+  </mat-form-field>
+</div>
+
+<div class="example-button-row">
+  <button mat-raised-button color="primary" (click)="nextStep.emit()">
+    Continue
+  </button>
+</div>

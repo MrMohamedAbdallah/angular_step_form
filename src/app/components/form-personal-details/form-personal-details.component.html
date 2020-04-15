@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" style="justify-content: center;">
+  <span>Enter Personal Details</span>
+</mat-toolbar>
+
+<!-- =========== Inputs =========== -->
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Your Occupation</mat-label>
+    <input
+      matInput
+      [value]="values.occupation"
+      (change)="change('occupation', $event)"
+    />
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Your City</mat-label>
+    <input matInput [value]="values.city" (change)="change('city', $event)" />
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Your Bio</mat-label>
+    <input matInput [value]="values.bio" (change)="change('bio', $event)" />
+  </mat-form-field>
+</div>
+
+<div class="example-button-row">
+  <button mat-raised-button color="primary" (click)="nextStep.emit()" style="margin-right: 15px;">
+    Continue
+  </button>
+  <button mat-raised-button (click)="prevStep.emit()">
+    Back
+  </button>
+
+</div>
